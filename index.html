@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Key Generator</title>
+</head>
+<body>
+    <h2>Random 16-Character Key Generator</h2>
+    <button onclick="generateKey()">Generate Key</button>
+    <p id="keyDisplay" style="font-family: monospace; font-size: 20px;"></p>
+
+    <script>
+        function generateKey() {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            for (let i = 0; i < 16; i++) {
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            document.getElementById("keyDisplay").textContent = result;
+        }
+    </script>
+</body>
+</html>
